@@ -1,5 +1,6 @@
 import express from "express"
 import db from "../db.js"
+import e from "express"
 
 const router = express.Router()
 
@@ -18,6 +19,8 @@ async function deleteUser(req, res) {
         if (deletion.affectedRows < 1) {
             return res.status(500).json({ message: "Não foi possivel deletar o usuario" })
         }
+
+        return res.status(200).json({message: "Usúario deletado"})
     } catch (error) {
         console.log(error)
         return res.status(500).json({message: "Erro interno!"})

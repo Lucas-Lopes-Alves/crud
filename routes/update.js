@@ -23,6 +23,6 @@ async function updateUser(req, res) {
     }
 }
 
-router.patch("/atualizar/:id", updateUser)
+router.patch("/atualizarUsuario/:id", updateUser)
 
 export default router

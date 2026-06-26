@@ -25,6 +25,6 @@ async function registerUser(req, res) {
     }
 }
 
-router.post("/cadastrar", registerUser)
+router.post("/cadastrarUsuario", registerUser)
 
 export default router
